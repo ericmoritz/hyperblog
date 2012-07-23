@@ -1,0 +1,171 @@
+/* We want any iframes to act like standard block elements.  To enable that
+we need to set the width to 100%.*/
+
+iframe { 
+width: 100%;
+}
+
+/* This rule keeps iframes that are children of the body from
+shrinking with the window.  We don't want this to happen because it
+causes them to have scrollbars */
+body > iframe {
+min-width: 790px;
+}
+
+/* This makes any of the oembeded objects from showing a broken plug-in error
+   if the jquery-object-oembed.js fails */
+object.oembed {
+    display: none;
+}
+
+/* Global Resources */
+iframe#site-header {
+    height: 120px;
+}
+
+/*
+Resource 
+==========
+
+The body of the HTML5 file follows the following structure.
+
+  * header
+    * h1
+    * details
+      * hidden metadata
+    * addition visible metadata
+  * section#content
+    * This is the actual content of the textual resource being fetched.
+  * footer
+    * visiable metadata after the content
+ 
+
+Static and Global Content
+--------------------------
+
+Any static content can be transcluded using HTML5's transclusion tags:
+object, iframe, img, video, audio.
+
+Examples of global content are the site header and footer, global navigation.
+These are resources that can benefit from their own caching and are not
+directly related to the resource being fetched.
+
+CSS Rules 
+-----------
+
+Header
+~~~~~~~
+
+*/
+
+/* This is the header of the resource */
+body > header {
+    margin-bottom: 10px;
+    font-style: italic;
+    font-size: 0.8em;
+}
+
+/* This is the title of the resource */
+body > header > h1 {
+    font-style: normal;
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+/*
+Primary Content
+~~~~~~~~~~~~~~~~
+
+The section#content element is the primary content of the resource.
+It is what people come to the URI to see, read, watch, etc */
+
+/* Children p tags are standard text paragraphs.  We style them as such */
+body > section#content > p {
+    padding: 10px 0px;
+}
+
+
+/* The header tags are used to outline the resource's content The outline
+looks like this:
+
+* h1
+  * 1st level tags
+  * h2
+    * 2nd level tags
+    * h3
+    * 3rd level tags
+      * h4
+      * 4th level tags
+
+Each level can have any number of items.  For instance:
+
+* h1
+  * p
+  * p
+* h1
+  * p
+  * p
+  * h2
+    * p
+    * p
+  * h2
+    * p
+
+*/
+body > section#content > h1 {
+    font-size: 2em;
+}
+
+body > section#content > h2 {
+    font-size: 1.7em;
+}
+
+body > section#content > h3 {
+    font-size: 1.5em;
+}
+
+body > section#content > h4 {
+    font-size: 1.2em;
+}
+
+
+/* 
+Inlined Transclusions
+^^^^^^^^^^^^^^^^^^^^^^
+
+An aside in the primary content block is treated as an transclusion of
+related media. Along with the transcluded media, a header and footer could
+be added as a textual refer to the transcluded media
+*/
+
+body > section#content > aside {
+    border: 1px solid black;
+    width: 320px;
+    float: right;
+}
+
+/* For completeness we allow them to float to the left */
+body > section#content > aside.align-left { float: left; }
+
+/* This aside is treated as the full width of the content. It is used to
+   interrupt the flow of the content. It's handle for inlined ads
+*/
+body > section#content > aside.full-width { 
+    float: none; 
+    width: 100%;
+}
+
+/* The header and footer get the same treatment */
+body > section#content > aside > header,
+body > section#content > aside > footer {
+    background-color: black;
+    color: white;
+    padding: 5px;
+}
+
+/* All cdata in the tags of footer have the color of white */
+body > section#content > aside > header *,
+body > section#content > aside > footer * {
+    color: white;
+}
+

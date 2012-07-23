@@ -1,0 +1,179 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+
+  <title>Document Title</title>
+  
+  <link href="../static/css/reset.css" rel="stylesheet" />
+  <link href="../static/css/style.css" rel="stylesheet" />  
+
+  <script src="../static/js/libs/modernizr-1.6.min.js"
+          type="application/javascript"></script>
+  <script src="../static/js/libs/jquery-1.4.2.js"
+          type="application/javascript"></script>
+  <script src="../static/js/libs/jquery.oembed.js"
+          type="application/javascript"></script>
+  <script src="../static/js/libs/jquery.object-oembed.js"
+          type="application/javascript"></script>
+</head>
+
+<body class="hentry">
+  <!-- This transcludes the site header into this document.  We don't
+  need to have this redundent static content in our story document -->
+  <iframe src="../static/header/index.html"></iframe>
+
+  <!-- The header tag lets us describe what the story is about -->
+  <header>
+    <!-- The story's title property -->
+    <h1 class="entry-title">Story Title</h1>
+
+    <!-- This lets us link to "Some Dudes" profile which would, if it
+    existed have all kinds of data encoded using the hcard microformat -->
+    <div class="author vcard">By
+      <a href="/authors/some-dude" class="fn">Some Dude</a>
+    </div>
+
+    <div>
+    Originally published at 
+    <time class="published" datetime="2010-11-21T00:10Z">
+      Nov 21, 2010 at 19:10 EST</time>
+
+    Updated at <time class="updated" datetime="2010-11-22T18:21Z">
+      Nov 21, 2010 at 18:21 EST</time>
+    </div>
+
+    <!-- In HTML5 the details tag is non-visable by default.  We can
+    use this to provide any kind of metadata about the body of the
+    resource -->
+    <details>
+      <!-- theoretically this could be used with transclusion to tease
+           this document from another document -->
+      <summary class="entry-summary">This is an example of an HTML5
+        document for an article using hypermedia and microformats
+        properly</summary>
+    </details>
+  </header>
+
+  <!-- Finally we get to the Story body.  The id allows us to
+  reference to the content by a hash in the URI. The entry-content is
+  for the hAtom microformat -->
+  <section id="content" class="entry-content">
+      <h1>Preface</h1>
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
+      rhoncus magna semper nibh ullamcorper fermentum. Praesent cursus
+      dolor vel quam consectetur porttitor. Lorem ipsum dolor sit amet,
+      consectetur adipiscing elit. Nam rhoncus, risus a vehicula
+      pulvinar, leo eros dignissim sapien, vitae vestibulum diam enim at
+      ligula. Integer mi tellus, tempor tempor accumsan non, consectetur
+      et dolor. In fermentum eleifend magna at convallis. Quisque varius
+      felis at orci cursus in commodo libero viverra. Lorem ipsum dolor
+      sit amet, consectetur adipiscing elit. Suspendisse vel nibh
+      ligula. Phasellus dui quam, suscipit id rhoncus eget, sodales a
+      risus. Phasellus nec tellus non lacus euismod suscipit. Praesent
+      ac risus in eros luctus blandit. Vestibulum vel lacus lacus. Sed
+      eleifend dolor leo, nec faucibus ligula. In nisl metus, lacinia in
+      bibendum a, blandit non nisl. Nunc scelerisque placerat augue, id
+      pretium eros aliquet fermentum.</p>
+  
+      <h1>Section 1</h1>
+  
+      <!-- Inline content -->
+      <aside>
+        <!-- This enables the transclusion of external media into this
+             document without any worry about plugins -->
+        <object data="http://www.youtube.com/watch?v%3DYCcAE2SCQ6k"
+               type="application/json+oembed" width="320" class="oembed">
+        </object>
+
+        <footer>
+          <h1><a href="http://www.youtube.com/watch?v=YCcAE2SCQ6k">Intro to REST</a></h1>
+        </footer>
+      </aside>
+  
+      <p>Quisque id turpis eu lectus imperdiet vestibulum quis ut
+      lorem. Suspendisse potenti. Donec sem urna, cursus et semper a,
+      facilisis ac augue. Aenean non dolor odio. Nullam at risus
+      urna. Aliquam nulla sem, consectetur eleifend euismod quis,
+      suscipit ac arcu. Fusce sit amet ligula elit, in varius
+      turpis. Aenean et massa in diam ultrices egestas vitae et
+      felis. Duis vel pulvinar enim. Nunc condimentum iaculis nisl, ac
+      aliquet massa luctus et. Vivamus metus elit, viverra at ultricies
+      at, sollicitudin non ligula. Integer dictum commodo magna,
+      dignissim ornare nulla bibendum et. Nam eu quam eget nisl
+      sollicitudin eleifend id a enim.</p>
+  
+      <p>Ut sit amet augue nulla. Curabitur accumsan pulvinar lacus, quis porta
+      erat accumsan eget. Nulla egestas, ante eget eleifend ultricies,
+      eros tortor consequat tellus, nec imperdiet leo lacus id
+      enim. Praesent in orci id neque feugiat euismod eget eget
+      lectus. Ut neque arcu, dignissim eget faucibus nec, convallis at
+      elit. Nam molestie felis a risus laoreet at euismod elit
+      mollis. Aliquam sed vehicula orci. Vestibulum ante ipsum primis in
+      faucibus orci luctus et ultrices posuere cubilia Curae; Donec leo
+      quam, feugiat vel molestie in, semper in est. In porttitor blandit
+      neque non varius. Donec scelerisque nibh rhoncus turpis commodo
+      feugiat adipiscing nunc sodales. Fusce nisi massa, facilisis eu
+      varius in, condimentum sit amet libero. Morbi non nulla
+      nisl. Proin id eros nec velit convallis pharetra id in quam. Nam
+      bibendum rutrum bibendum. Morbi varius pharetra mattis. Cras in
+      ipsum orci, rhoncus tincidunt sem.
+  
+      <h1>Section 2</h1>
+  
+      <p>In tincidunt libero eget erat interdum vitae pulvinar justo
+      scelerisque. Quisque in sagittis quam. Sed et sollicitudin
+      risus. Morbi facilisis mi id ipsum sagittis lacinia. Phasellus
+      accumsan bibendum molestie. Donec vel augue id est pharetra
+      faucibus. Cras vulputate, velit id molestie fringilla, mi ligula
+      pharetra sapien, convallis pretium sem elit nec elit. Sed rhoncus
+      nunc et tellus sodales non pulvinar nibh molestie. Integer et
+      neque nec erat commodo fringilla a ac nisl. In mi turpis, semper
+      at venenatis ac, eleifend vitae ante. Quisque facilisis
+      consectetur odio quis euismod. Nulla facilisi.</p>
+  </section>
+
+  <footer>
+    <!-- This section describes the categories of this story
+         These can be indexed by a search engine or storied in a
+         database in order to fetch documents by category
+      -->
+    <section id="permalink">
+      <a href="" rel="bookmark">permalink</a>
+    </section>
+
+    <section id="categories">
+      <h1>Categories:</h1>
+
+      <ul>
+        <!-- The tag URIs resolve to entries/tags/programming so that
+        we can fetch the "Entries by Tag" resource -->
+        <li><a href="../tags/programming" rel="tag">programming</a></li>
+        <li><a href="../tags/greek" rel="tag">rest</a></li>
+      </ul>
+    </section>
+
+    <!-- This section describes the licencing of the story itself 
+      not of the entire HTML document -->
+    <section id="licencing">
+      <a rel="license"
+         href="http://creativecommons.org/licenses/by-sa/3.0/">
+        <img alt="Creative
+                  Commons License" style="border-width:0"
+             src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png"
+             /></a>
+
+      <br />
+
+      This work is licensed under a
+      <a rel="license"
+         href="http://creativecommons.org/licenses/by-sa/3.0/">Creative
+        Commons Attribution-ShareAlike
+        3.0 Unported License</a>.
+    </section>
+  </footer>
+  <iframe src="../static/footer/index.html"></iframe>
+</body>
+</html>
